@@ -1,0 +1,125 @@
+/* Styles for the top navigation bar on large screens */
+.top-nav {
+    display: flex;
+    align-items: center;
+    background-color: var(--clr-main);
+}
+
+/* Styles for the logo */
+.logo {
+    width: 4rem;
+    height: 3.5rem;
+    margin-left: 3rem;
+}
+
+/* Styles for the navigation title */
+.nav-title {
+    display: flex;
+    font-size: 2rem;
+    margin-left: 1rem;
+    color: var(--clr-white);
+}
+
+/* Styles for the navigation list on large screens */
+.nav-list {
+    display: flex;
+    gap: 3rem;
+    list-style-type: none;
+}
+
+/* Styles for the links in the navigation list */
+.nav-list-link {
+    color: var(--clr-white);
+    text-decoration: none;
+    font-size: var(--fs-md);
+}
+
+/* Styles for the mobile menu button on mobile devices */
+.mobile-cb {
+    display: none;
+}
+
+/* Styles for the mobile navigation menu (initially hidden) */
+@media (max-width: 768.98px) {
+    .nav-list {
+        display: grid;
+        position: fixed;
+        margin: 0;
+        top: 0;
+        right: -18rem;
+        background: var(--clr-black-light);
+        width: 30%;
+        height: 100vh;
+        align-content: center;
+        z-index: 2;
+        transition: right .35s;
+        box-shadow: -0.1rem 0 0.5rem var(--clr-black);
+        gap: 2.5rem;
+        text-align: right;
+        padding-right: 1rem;
+    }
+
+    /* Styles for the mobile menu button */
+    .mobile-btn {
+        position: fixed;
+        top: 4rem;
+        right: 2rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        z-index: 3;
+    }
+
+    /* Styles for the bars in the mobile menu button */
+    .mobile-btn > span,
+    .mobile-btn > span::before,
+    .mobile-btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 0.2rem;
+        background: var(--clr-black);
+        transition-duration: 0.25s;
+    }
+
+    .mobile-btn > span::before {
+        content: "";
+        top: -0.5rem;
+    }
+
+    .mobile-btn > span::after {
+        content: "";
+        top: 0.5rem;
+    }
+
+    /* Styles for the mobile checkbox (initially hidden) */
+    .mobile-cb {
+        position: fixed;
+        top: 3rem;
+        right: 1.7rem;
+        z-index: 4;
+        opacity: 0;
+        width: 2rem;
+        height: 1.7rem;
+        display: block;
+    }
+
+    /* Styles for the bars in the mobile menu button when the checkbox is checked (menu open) */
+    .mobile-cb:checked + .mobile-btn > span {
+        transform: rotate(45deg);
+    }
+
+    .mobile-cb:checked + .mobile-btn > span::before {
+        top: 0;
+        transform: rotate(0deg);
+    }
+
+    .mobile-cb:checked + .mobile-btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    /* Styles for the mobile navigation menu when the checkbox is checked (menu open) */
+    .mobile-cb:checked ~ .nav-list {
+        right: 0;
+    }
+}

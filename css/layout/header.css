@@ -1,0 +1,22 @@
+.hero-container{
+    background: url(../../imgs/headerHomepage.jpg);
+    background-size: cover;
+    background-position: initial;
+    border-bottom-left-radius: 6rem;
+    border-bottom-right-radius: 6rem;
+    color: var(--clr-white);
+    height: min(45rem, 50rem, 55rem);
+    text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 767px) { 
+
+    .hero-container{
+        height: 100%;
+    }
+}
+
+
+
+

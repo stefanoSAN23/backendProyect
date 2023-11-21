@@ -1,0 +1,331 @@
+/* Styles for the header text container */
+.headerTextContainer {
+    display: grid; 
+    background-color: rgba(91, 88, 88, 0.71); 
+    width: 50vw; 
+    margin: 8rem auto; 
+    border-radius: 5.625rem;
+    overflow: auto; 
+    text-align: center;
+    padding: 1.5rem;
+}
+
+/* Styles for elements with the class .sectionTwoCard */
+.sectionTwoCard {
+    text-align: center; 
+    display: grid;
+    border-radius: 4.25rem;
+    background-color: rgba(216, 22, 22, 1);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Styles for elements with the class .sectionTwoActivity */
+.sectionTwoActivity {
+    object-fit: cover; 
+    display: grid; 
+    width: 100%; 
+    height: 13rem; 
+    border-radius: 4.25rem 4.25rem 4.25rem 4.25rem; 
+}
+
+/* Styles for the recipes container */
+.recipes-container {
+    text-align: center; 
+    background-color: #C0C0C0; 
+    width: 100%; 
+    border-radius: 3rem; 
+}
+
+/* Styles for elements with the class .recipe-thumb */
+.recipe-thumb {
+    display: flex;
+    flex-direction: column; 
+    padding: 0 1rem 3rem;
+}
+
+/* Styles for the food container */
+.food-container {
+    display: grid; 
+    width: 80vw; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 7rem;
+    margin: auto; 
+    padding: 2rem; 
+}
+
+/* Styles for the section two container */
+.sectionTwoContainer {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    font-weight: var(--fw-md); 
+    gap: 2rem; 
+    width: 80vw; 
+    margin: 10rem auto 4rem; 
+}
+
+/* Styles for elements with the class .card */
+.card {
+    display: grid; 
+    background: var(--clr-black); 
+    border-radius: 0 0 60px 60px; 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); 
+    text-align: center; 
+}
+
+/* Styles for the register invitation CTA container */
+.register-invitation-cta {
+    display: grid;
+    width: 70vw; 
+    margin: 5rem auto; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 2rem; 
+    overflow: hidden; 
+    object-fit: cover; 
+    background-color: #000000; 
+    border-radius: 4.5rem; 
+    box-shadow: 0 0 15px rgba(0,0,0,0.8);
+    padding: 0.5rem; 
+}
+
+/* Styles for the content of the register invitation CTA */
+.register-invitation-content {
+    display: grid; 
+    gap: 2rem;
+    align-content: center; 
+    margin-left: 6rem;
+}
+
+/* Styles for the CTA app container */
+.cta-app-container {
+    display: flex; 
+    gap: 2rem; 
+}
+
+/* Styles for the CTA container */
+.cta-container {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin-bottom: 16rem; 
+}
+
+/* Styles for the CTA menu icon */
+.cta-menu-icon {
+    display: flex; 
+    justify-content: center; 
+    margin: 8rem 0 0 0;
+}
+
+/* Styles for the rice container */
+.rice-container {
+    display: grid; 
+    text-align: center;
+    padding: 2.5rem; 
+}
+
+/* Styles for the menu background container */
+.menu-bg-container {
+    padding: 2rem; 
+    display: grid; 
+    text-align: center; 
+    background-image: url(../../imgs/bgMenuIcon.jpg);
+    background-size: cover;
+}
+
+/* Styles for the top card container */
+.top-card {
+    display: flex;
+    background: var(--clr-main); 
+    align-items: center;
+    justify-content: flex-end; 
+    padding: 1rem 1rem; 
+}
+
+/* Styles for the register container */
+.register-container {
+    display: grid; 
+    padding: 2.5rem; 
+    margin: 3rem auto; 
+    width: 70vw; 
+    border-radius: 4rem; 
+    background: hsla(0, 0%, 18%, 90%); 
+    overflow: auto; 
+    gap: 4rem;
+    justify-content: center; 
+}
+
+/* Styles for the information modal container */
+.info-modal {
+    margin: 1rem auto; 
+    display: flex;
+    gap: 4rem; 
+}
+
+/* Styles for the CTA, price, and order now container */
+.cta-price-orderNow {
+    display: flex; 
+    justify-content: space-between; 
+    padding: 1rem;
+}
+
+/* Styles for the order container */
+.order-container {
+    margin: 8rem auto;
+    color: var(--clr-white);
+    font-size: var(--fs-md); 
+    display: grid; 
+    width: 50vw; 
+    height: 50vh;
+    border-radius: 2rem; 
+    background: hsla(0, 0%, 18%, 90%);
+}
+
+/* Styles for the order buttons container */
+.orderBtns-container {
+    display: flex;
+    width: fit-content; 
+    margin: 2rem auto; 
+    gap: 4rem; 
+    padding: 1rem; 
+}
+
+/* Styles for the history container */
+.history-container {
+    margin: 3rem auto;
+    color: var(--clr-white); 
+    font-size: var(--fs-md); 
+    display: grid; 
+    padding: 2.5rem; 
+    width: 50vw; 
+    height: 60vh; 
+    border-radius: 2rem;
+    background: hsla(0, 0%, 18%, 90%); 
+}
+
+/* Styles for the register background */
+.backgroundRegister {
+    background: url(../../imgs/restaurante-chino-lugo.jpg); 
+    width: 100%; 
+    background-size: cover;
+    background-position: center; 
+}
+
+/* Styles for the dish information background */
+.backgroundDishInfo {
+    background: url(../../imgs/dishBG.jpg);
+    background-size: cover; 
+    background-position: left; 
+}
+
+/* Styles for the "Your Order" text */
+.yourOrder-txt {
+    display: grid; 
+    margin: 2rem; 
+}
+
+/* Styles for the up cart CTA */
+.cta-up-cart {
+    display: flex;
+    flex-direction: column; 
+}
+
+/* Styles for the food menu */
+.menu {
+    padding: 0; 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(350px,1fr)); 
+    grid-gap: 20px 40px;
+}
+
+/* Styles for elements with the class .food-items */
+.food-items {
+    display: grid; 
+    grid-template-rows: auto 1fr;
+    border-radius: 15px; 
+    box-shadow: 0 0 15px rgba(0,0,0,0.1); 
+    margin: 2rem 20px; 
+}
+
+/* Styles for the dish information container */
+.dishInfo-container {
+    display: grid; 
+    color: var(--clr-white); 
+    padding: 1rem; 
+    justify-content: center; 
+}
+
+/* Styles for the container of dish information images */
+.infoImageDish {
+    display: flex; 
+    gap: 1rem; 
+    width: 65vw; 
+    align-items: center; 
+}
+
+/* Styles for images in the dish information container */
+.infoImageDish img {
+    border-radius: 1rem;
+}
+
+/* Styles for the price in the dish information container */
+.infoPrice {
+    margin: 3rem 0; 
+    display: flex; 
+    font-size: 3rem; 
+    gap: 1rem;
+}
+
+/* Styles for details in the dish information container */
+.dishInfoDetails {
+    display: flex; 
+    gap: 3rem; 
+}
+
+/* Styles for the map container */
+.map-container {
+    display: grid; 
+    width: 75vw;
+    margin: 1rem auto 5rem; 
+    text-align: center; 
+    background-color: var(--clr-black); 
+    padding: 1rem; 
+    color: var(--clr-white); 
+    border-radius: 4rem; 
+    box-shadow: 0 0 15px rgba(0,0,0,0.8); 
+}
+
+/* Styles for iframes within the map container */
+.map-container iframe {
+    border-radius: 0rem 0rem 4rem 4rem; 
+}
+
+/* Styles for animated images */
+.img-animated {
+    width: 8vw; 
+}
+
+/* Styles for the container of animated images */
+.img-animated-container {
+    display: grid; 
+    justify-items: center; 
+    padding: 6rem; 
+}
+
+/* Styles for elements within the container of animated images on small screens */
+@media (max-width: 767px) { 
+    .register-invitation-content {
+        margin: 0 1rem 2rem; 
+        text-align: center; 
+        align-items: center; 
+        align-content: center; 
+        order: 2; 
+        gap: 3rem; 
+    }
+
+    .infoImage {
+        width: 60vw; 
+    }
+    .img-animated {
+        width: 18vw; 
+    }
+}

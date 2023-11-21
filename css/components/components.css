@@ -1,0 +1,21 @@
+/* Styles for elements with the class .link-register */
+.link-register {
+    margin: auto; 
+    color: var(--clr-gray-txt); 
+}
+
+/* Styles for the hover state of elements with the class .link-register */
+.link-register:hover {
+    color: var(--clr-main); 
+}
+
+/* Styles for elements with the class .link-login */
+.link-login {
+    margin: auto; 
+    color: var(--clr-gray-txt); 
+}
+
+/* Styles for the hover state of elements with the class .link-login */
+.link-login:hover {
+    color: var(--clr-main); 
+}

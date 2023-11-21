@@ -1,0 +1,139 @@
+/* General styles for elements with the class .btn */
+.btn {
+    display: grid; 
+    align-items: center; 
+    border-radius: 1.5rem; 
+    padding: .5rem 2rem; 
+    text-decoration: none; 
+}
+
+/* Styles for buttons with the class .go-to-menu-btn */
+.go-to-menu-btn {
+    text-align: center; 
+    background: rgba(29, 28, 28, 1); 
+    box-shadow: 5px 5px 10px rgba(0, 0.5, 0.5, 0.5); 
+    color: #FFFFFF; 
+    font-size: 1.5rem; 
+    margin-top: 1rem; 
+    width: 14rem; 
+    height: 3rem; 
+    border-radius: 37px; 
+}
+
+/* Styles for .go-to-menu-btn button when hovering */
+.go-to-menu-btn:hover {
+    background-color: var(--clr-main); 
+}
+
+/* Styles for buttons with the class .register-invitation-btn */
+.register-invitation-btn {
+    text-align: center; 
+    background: #DCDCDC; 
+    box-shadow: 5px 5px 10px rgba(0, 0.5, 0.5, 0.5); 
+    color: #000000; 
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    height: 3rem; 
+    border-radius: 37px; 
+    transition: background-color 0.3s; 
+    cursor: pointer;
+}
+
+/* Styles for .register-invitation-btn button when hovering */
+.register-invitation-btn:hover {
+    background-color: var(--clr-main); 
+}
+
+/* Styles for buttons with the class .btn-price-modal */
+.btn-price-modal {
+    color: var(--clr-white);
+    font-size: 2.5rem; 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+/* Styles for .btn-price-modal button when hovering */
+.btn-price-modal:hover {
+    color: #ad1212; 
+}
+
+/* Styles for buttons with the class .btn-order-modal */
+.btn-order-modal {
+    background: var(--clr-main); 
+    box-shadow: 5px 5px 10px rgba(0, 0.5, 0.5, 0); 
+    color: var(--clr-white); 
+    font-size: 1.5rem; 
+    border-radius: 0.5rem; 
+    padding: 0.5rem 1rem; 
+    transition: background-color 0.3s; 
+    cursor: pointer; 
+    width: fit-content; 
+    text-decoration: none; 
+}
+
+/* Styles for .btn-order-modal button when hovering */
+.btn-order-modal:hover {
+    background-color: #930f0f; 
+}
+
+/* Styles for buttons with the class .btn-register */
+.btn-register {
+    text-align: center;
+    background: var(--clr-black);
+    box-shadow: 5px 5px 10px rgba(0, 0.5, 0.5, 0.5);
+    color: var(--clr-white);
+    font-size: 1.5rem;
+    font-weight: bold;
+    height: 3rem;
+    border-radius: 37px;
+    transition: background-color 0.3s;
+    cursor: pointer; 
+    width: fit-content; 
+    margin: auto;
+}
+
+/* Styles for .btn-register button when hovering */
+.btn-register:hover {
+    background-color: var(--clr-main);
+    color: var(--clr-white);  
+}
+
+/* Styles for buttons with the class .btn-login */
+.btn-login {
+    text-align: center;
+    background: var(--clr-black);
+    box-shadow: 5px 5px 10px rgba(0, 0.5, 0.5, 0.5);
+    color: var(--clr-white);
+    font-size: 1.5rem;
+    font-weight: bold;
+    height: 3rem;
+    border-radius: 37px;
+    transition: background-color 0.3s;
+    cursor: pointer; 
+    width: fit-content; 
+    margin: auto;
+}
+
+/* Styles for .btn-login button when hovering */
+.btn-login:hover {
+    background-color: var(--clr-main);
+    color: var(--clr-white);  
+}
+
+/* Styles for buttons with the class .btn-order-dish */
+.btn-order-dish {
+    background: var(--clr-main);
+    box-shadow: 5px 5px 10px rgba(0, 0.5, 0.5, 0.5);
+    color: var(--clr-white);
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+    cursor: pointer; 
+    margin: auto;
+}
+
+/* Styles for .btn-order-dish button when hovering */
+.btn-order-dish:hover {
+    background-color: #930f0f;
+}

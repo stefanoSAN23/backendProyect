@@ -1,0 +1,31 @@
+/* Styles for the registration form */
+.register-form {
+    border-radius: 1rem;
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    margin: auto; 
+    gap: 1rem;
+}
+
+/* Styles for the labels in the registration form */
+.lb-register {
+    color: var(--clr-white); 
+    font-size: var(--fs-md); 
+    width: 6rem; 
+}
+
+/* Styles for the input fields in the registration form */
+.inpt-register {
+    height: 2rem; 
+    width: 25vw; 
+    border-radius: .5rem; 
+    border: none; 
+    background: #D9D9D9; 
+    flex: 1; 
+}
+
+/* Styles for the input field in focus state */
+.inpt-register:focus {
+    outline: none; 
+}

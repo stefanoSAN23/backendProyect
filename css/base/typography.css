@@ -1,0 +1,134 @@
+/* Defining styles for elements with the .hero-title class */
+.hero-title {
+    font-family: var(--ff-main);
+    font-size: 2.5rem; 
+    font-weight: var(--fw-bk); 
+    display: block;
+    padding: auto;
+}
+
+
+/* Defining styles for elements with the .hero-text class */
+.hero-text {
+    font-size: 1.4rem; 
+}
+
+/* Defining styles for elements with the .sectionTwoText class */
+.sectionTwoText {
+    font-size: var(--fs-md); 
+    font-size: 2rem;
+    color: var(--clr-white); 
+    font-weight: bold; 
+}
+
+
+/* Defining styles for elements with the .recipe-title class */
+.recipe-title {
+    font-size: var(--fs-md);
+    font-family: var(--ff-main);
+    color: white; 
+    margin: 1rem 0 0; 
+}
+
+/* Defining styles for elements with the .recipe-text class */
+.recipe-text {
+    font-size: var(--fs-nm); 
+    color: var(--clr-white); 
+}
+
+
+/* Defining styles for elements with the .recipes-title class */
+.recipes-title {
+    font-family: var(--ff-main); 
+    font-size: clamp(var(--fs-md), 1.875rem, var(--fs-lg)); 
+    margin: 1rem auto; 
+}
+
+
+/* Defining styles for elements with the .recipe-name class */
+.recipe-name {
+    color: var(--clr-white); 
+    font-weight: bold; 
+    margin: auto; 
+    font-size: 25px; 
+    text-shadow: 1px 1.5px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* Styles for the hover state of elements with the .recipe-name class */
+.recipe-name:hover {
+    color: var(--clr-gray-txt); 
+}
+
+/* Defining styles for elements with the .register-invitation-title class */
+.register-invitation-title {
+    font-size: clamp(2rem, 2.25rem, var(--fs-lg)); 
+    width: min(80%, 90%, 100%); 
+    margin: 0; 
+    color: var(--clr-white); 
+}
+
+
+/* Defining styles for elements with the .register-welcome class */
+.register-welcome {
+    margin: 2rem auto; 
+    color: var(--clr-white); 
+    font-family: var(--ff-main); 
+    font-size: 4rem; 
+}
+
+/* Defining styles for elements with the .history-title class */
+.history-title {
+    margin: 1rem auto; 
+    color: var(--clr-white); 
+    font-family: var(--ff-main);
+    font-size: 3rem; 
+}
+
+/* Defining styles for elements with the .thanks-title class */
+.thanks-title {
+    margin: 1rem auto; 
+    color: var(--clr-white); 
+    font-family: var(--ff-main); 
+    font-size: 3rem; 
+}
+
+/* Defining styles for elements with the .menuText class */
+.menuText {
+    font-size: var(--fs-xl); 
+    color: var(--clr-white); 
+}
+
+/* Defining styles for elements with the .phras-text class */
+.phras-text {
+    font-size: var(--fs-md);
+    color: var(--clr-white);
+}
+
+
+/* Defining styles for elements with the .menuTxtCategories class */
+.menuTxtCategories {
+    font-size: 4rem; 
+    text-decoration-line: overline; 
+    text-shadow: 1px 1.5px 0px rgba(0, 0, 0, 0.5); 
+}
+
+
+/* Defining styles for elements with the .priceInfo class */
+.priceInfo {
+    font-size: 4rem; 
+}
+
+/* Defining styles for elements with the .menu-decoration-text class */
+.menu-decoration-text {
+    display: grid; 
+    max-width: 80ch; 
+    text-align: center; 
+}
+
+
+/* Defining styles for elements with the .register-invitation-title class on small screens (less than 769px wide) */
+@media (max-width: 768.98px) {
+    .register-invitation-title {
+        margin: auto; 
+    }
+}

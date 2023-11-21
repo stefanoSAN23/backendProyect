@@ -1,0 +1,57 @@
+/* Styles for the footer container */
+.footer-container {
+    display: grid; 
+    border-top-left-radius: 6rem; 
+    border-top-right-radius: 6rem;
+    color: var(--clr-white); 
+    width: 100%; 
+    margin: 2rem 0 0;
+    background: var(--clr-main); 
+}
+
+/* Styles for the footer content */
+.footer-content {
+    display: grid; 
+    width: 80vw; 
+    margin: 2rem auto; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 1.5rem; 
+}
+
+/* Styles for the footer links */
+.footer-links {
+    display: grid; 
+    margin: .05rem auto; 
+    grid-template-columns: repeat(auto-fit, minmax(146px, 1fr));
+    gap: 1rem; 
+}
+
+/* Styles for the navigation list in the footer */
+.nav-footer-list {
+    padding: 0; 
+    list-style-type: none; 
+}
+
+/* Styles for the navigation links in the footer */
+.nav-footer-link {
+    color: var(--clr-white); 
+    text-decoration: none;
+    font-size: var(--fs-md); 
+}
+
+/* Styles for the legal text in the footer */
+.footer-legal {
+    text-align: center; 
+    font-size: var(--fs-md);
+}
+
+/* Styles for the app download section in the footer */
+.download-app {
+    width: 80vw; 
+    margin: auto; 
+}
+
+/* Styles for elements with the class .footer-decoration */
+.footer-decoration {
+    text-decoration: overline; 
+}

@@ -1,0 +1,59 @@
+/* Styles for elements with the class .rice-image */
+.rice-image {
+    width: 13.688rem; 
+    height: 11.125rem; 
+    margin: auto; 
+}
+
+/* Styles for elements with the class .register-invitation-image */
+.register-invitation-image {
+    display: block; 
+    width: 50%;
+    margin-left: 50%; 
+    border-radius: 0 4.5rem 4.5rem 0; 
+}
+
+/* Styles for elements with the class .recipe-image */
+.recipe-image {
+    object-fit: cover; 
+    object-position: center; 
+    display: block; 
+    width: 100%;
+    border-radius: 1rem; 
+    margin: 1rem auto 1rem; 
+}
+
+/* Styles for elements with the classes .instagram, .facebook, and .twitter */
+.instagram, .facebook, .twitter {
+    height: 55.89px; 
+    width: 59px; 
+}
+
+/* Styles for elements with the class .cart-card */
+.cart-card {
+    width: 4rem; 
+    height: 4rem; 
+    cursor: pointer; 
+    background: url(../../imgs/icons/carrito.svg); 
+    background-size: cover;
+    background-position: center;
+    border: none; 
+}
+
+/* Styles for elements with the class .icon-persons */
+.icon-persons {
+    width: 4rem; 
+    height: 4rem; 
+    cursor: pointer; 
+    border: none; 
+}
+
+/* Styles within the media query for screens with a maximum width of 768.98px */
+@media (max-width: 768.98px) {
+    /* Styles for elements with the class .register-invitation-image on small screens */
+    .register-invitation-image {
+        margin: auto; 
+        text-align: center; 
+        border-radius: 0; 
+    }
+}

@@ -1,0 +1,34 @@
+:root{
+    /* fonts */
+    font-family: 'Exo', sans-serif;
+
+    /*Font Size*/
+
+    --fs-xl: 5rem;/*80px*/
+    --fs-lg: 2.5rem;/*40px*/
+    --fs-md: 1.125rem;/*18px*/
+    --fs-nm: 1rem; /*16*/
+    --fs-sm: 0.875rem;/*14*/
+
+    /*Font weight*/
+
+    --fw-bk: 900;
+    --fw-md: 500;
+    --fw-rg: 400;
+
+    /*Colors*/
+
+    --clr-main: hsla(0, 82%, 47%);
+    --clr-white: hsla(0, 0%, 100%, 1);
+    --clr-black: hsla(0, 0%, 0%, 1);
+    --clr-gray-txt: hsla(0, 0%, 55%, 1);
+    --clr-black-light: hsla(0, 0%, 0%, .5);
+    --clr-black-shadow: hsla(0, 0%, 0%, .1);
+
+    /*Variables project*/
+
+
+}
+
+
+
