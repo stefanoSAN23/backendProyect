@@ -8,7 +8,7 @@
     $database = new Medoo([
         'type'=>'mysql',
         'host' => 'localhost',
-        'database' => 'backend',
+        'database' => 'backendshipu',
         'username' => 'root',
         'password' => ''
     ]);
