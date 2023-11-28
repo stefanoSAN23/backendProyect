@@ -33,11 +33,11 @@
 
             <!--Navigation list-->
             <ul class="nav-list">
-                <li><a class="nav-list-link" href="./history.html">USER HISTORY</a></li>
-                <li><a class="nav-list-link" href="./menu.html">MENU</a></li>
-                <li><a class="nav-list-link" href="./cart.html">CART</a></li>
-                <li><a class="nav-list-link" href="./register.html">SIGN UP</a></li>
-                <li><a class="nav-list-link" href="./login.html">LOGIN</a></li>
+                <li><a class="nav-list-link" href="./history.php">USER HISTORY</a></li>
+                <li><a class="nav-list-link" href="./menu.php">MENU</a></li>
+                <li><a class="nav-list-link" href="./cart.php">CART</a></li>
+                <li><a class="nav-list-link" href="./register.php">SIGN UP</a></li>
+                <li><a class="nav-list-link" href="./login.php">LOGIN</a></li>
             </ul>
 
 
@@ -95,7 +95,7 @@
 
 
         <div class="cta-container">
-            <a href="./menu.html" class="btn go-to-menu-btn">Go to Menu</a>
+            <a href="./menu.php" class="btn go-to-menu-btn">Go to Menu</a>
         </div>
 
 
