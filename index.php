@@ -19,7 +19,7 @@
 <body>
     <header class="hero-container">
         <nav class="top-nav">
-            <a href="./index.html"><img class="logo" src="./imgs/logoOscuro.png" alt="Shipu Logo"></a>
+            <a href="./index.php"><img class="logo" src="./imgs/logoOscuro.png" alt="Shipu Logo"></a>
             <p class="nav-title">Shípǔ</p>
 
             <!--mobile nav btn (camping extracted)-->
