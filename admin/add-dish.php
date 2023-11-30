@@ -84,7 +84,7 @@
 
             <div class="form-items">
                 <label for="name_category">Dish Category</label>
-                <select name="category" id="name_category">
+                <select name="name_category" id="name_category">
                     <?php 
                         foreach ($categories as $category){
                             echo "<option value=".$category["id_category"].">".$category["name_category"]."</option>";
