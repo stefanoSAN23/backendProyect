@@ -12,12 +12,9 @@
         "tb_for_dishes.dish_price",
         "tb_for_categories.id_category",
         "tb_for_categories.name_category" 
-    //], [
-        //where to show featured dishes only
-        //"tb_dishes.featured" => 1 
+   
     ]);
 
-    // var_dump($dishes);
 ?>
 
 <!DOCTYPE html>
@@ -144,7 +141,7 @@
             <section class="food-container">
 
             <?php 
-            // Verify if there are at least 4 elements in $relatedDishes
+            // Verify if there are at least 3 elements in $relatedDishes
             $dishesCount = count($dishes);
             $numberContainers = 3;
 
@@ -175,7 +172,7 @@
                                 echo "<img class='recipe-image' src='./imgs/menu/appetizerTwo.png' alt=''>";
                                 echo "<div class='cta-price-orderNow '>";
                                    echo "<a class='btn-price-modal' href=''>$12</a>";
-                                   echo  "<a class='btn-order-modal' href='./dishInfo.html'>Order Now!</a>";
+                                   echo  "<a class='btn-order-modal' href='./dishInfo.php'>Order Now!</a>";
                                 echo "</div>";
                                 echo "<div class='btn-close'>";
                                    echo "<label for='btn-modal-uno'>Close</label>";
@@ -186,7 +183,7 @@
                     echo "</div>";
                     echo "<div class='recipe-thumb'>";
                         echo "<img class='recipe-image' src='./imgs/imgs2/" . $dish["dish_image"] . "' alt='RecipeOne'>";
-                      echo "<a class='btn recipe-name' href='#'>" . $dish["dish_name"] . "</a>";
+                      echo "<a class='btn recipe-name' href='dishInfo.php?id='>" . $dish["dish_name"] . "</a>";
                     echo "</div>";
 
 
@@ -337,7 +334,7 @@ for ($i = 0; $i < $numberContainers; $i++) {
         <div class="register-invitation-cta">
             <section class="register-invitation-content">
                 <h2 class="register-invitation-title">Register and order our delicious dishes!</h2>
-                <a href="./register.html" class="btn register-invitation-btn">Register</a>
+                <a href="./register.php" class="btn register-invitation-btn">Register</a>
             </section>
             <div>
                 <img class="register-invitation-image" src="./imgs/register-invitation-img.jpg"

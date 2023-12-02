@@ -310,6 +310,10 @@
     justify-items: center; 
     padding: 6rem; 
 }
+.infoImage{
+    width: 500px; 
+    height: auto; 
+}
 
 /* Styles for elements within the container of animated images on small screens */
 @media (max-width: 767px) { 
