@@ -19,3 +19,17 @@
 .link-login:hover {
     color: var(--clr-main); 
 }
+
+.lang-btn {
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: #ffffff; /* Cambia este color según tu preferencia */
+    color: #000000; /* Cambia este color según tu preferencia */
+    border-radius: 5px;
+}
+
+/* Cambia el color cuando se pasa el mouse por encima */
+.lang-btn:hover {
+    background-color: #2980b9; /* Cambia este color según tu preferencia */
+}

@@ -140,68 +140,6 @@
 
             <section class="food-container">
 
-            <?php 
-            // Verify if there are at least 3 elements in $relatedDishes
-            $dishesCount = count($dishes);
-            $numberContainers = 3;
-
-            for ($i = 0; $i < $numberContainers; $i++) {
-
-                if ($i < $dishesCount) {
-
-                    $dish = $dishes[$i];
-
-               echo "<div class='card'>";
-
-               echo  "<div class='top-card'>";
-
-                       echo "<div class='boton-modal'>";
-                           echo "<label for='btn-modal-uno'> BUY </label>";
-                        
-                    echo "</div>";
-                       echo "<input type='checkbox' id='btn-modal-uno'>";
-                         echo "<div class='container-modal'>";
-                           echo "<div class='content-modal'>";
-                               echo "<div class='superior-info-modal'>";
-                                   echo "<h2>Fruit Salad</h2>";
-                                   echo "<div class='info-modal'>";
-                                       echo "<img class='icon-persons' src='./imgs/familiar.png' alt='modalCart'>";
-                                        echo "<h3>Salad with apple, papaya and watermelon</h3>";
-                                    echo "</div>";
-                                echo "</div>";
-                                echo "<img class='recipe-image' src='./imgs/menu/appetizerTwo.png' alt=''>";
-                                echo "<div class='cta-price-orderNow '>";
-                                   echo "<a class='btn-price-modal' href=''>$12</a>";
-                                   echo  "<a class='btn-order-modal' href='./dishInfo.php'>Order Now!</a>";
-                                echo "</div>";
-                                echo "<div class='btn-close'>";
-                                   echo "<label for='btn-modal-uno'>Close</label>";
-                                echo "</div>";
-                            echo "</div>";
-                           echo "<label for='btn-modal-uno' class='close-modal'></label>";
-                        echo "</div>";
-                    echo "</div>";
-                    echo "<div class='recipe-thumb'>";
-                        echo "<img class='recipe-image' src='./imgs/imgs2/" . $dish["dish_image"] . "' alt='RecipeOne'>";
-                      echo "<a class='btn recipe-name' href='dishInfo.php?id='>" . $dish["dish_name"] . "</a>";
-                    echo "</div>";
-
-
-                echo "</div>";
-
-                }
-            }
-                ?>
-
-
-            </section>
-
-            <!--<End Section Three first part-->
-
-            <!--Section Three second part-->
-
-            <section class="food-container">
-
 <?php 
 // Verify if there are at least 4 elements in $relatedDishes
 $dishesCount = count($dishes);
@@ -209,7 +147,7 @@ $numberContainers = 3;
 
 for ($i = 0; $i < $numberContainers; $i++) {
 
-    if ($i < $dishesCount) {
+    if ($i < $dishesCount ) {
 
         $dish = $dishes[$i];
 
@@ -245,7 +183,69 @@ for ($i = 0; $i < $numberContainers; $i++) {
         echo "</div>";
         echo "<div class='recipe-thumb'>";
             echo "<img class='recipe-image' src='./imgs/imgs2/" . $dish["dish_image"] . "' alt='RecipeOne'>";
-          echo "<a class='btn recipe-name' href='#'>" . $dish["dish_name"] . "</a>";
+          echo "<a class='btn recipe-name' href='dishInfo.php?id=".$dish["id_dish"]."'>" . $dish["dish_name"] . "</a>";
+        echo "</div>";
+
+
+    echo "</div>";
+
+    }
+}
+    ?>
+
+
+</section>
+
+            <!--<End Section Three first part-->
+
+            <!--Section Three second part-->
+
+            <section class="food-container">
+
+<?php 
+// Verify if there are at least 4 elements in $relatedDishes
+$dishesCount = count($dishes);
+$numberContainers = 3;
+
+for ($i = 0; $i < $numberContainers; $i++) {
+
+    if ($i < $dishesCount ) {
+
+        $dish = $dishes[$i];
+
+   echo "<div class='card'>";
+
+   echo  "<div class='top-card'>";
+
+           echo "<div class='boton-modal'>";
+               echo "<label for='btn-modal-uno'> BUY </label>";
+            
+        echo "</div>";
+           echo "<input type='checkbox' id='btn-modal-uno'>";
+             echo "<div class='container-modal'>";
+               echo "<div class='content-modal'>";
+                   echo "<div class='superior-info-modal'>";
+                       echo "<h2>Fruit Salad</h2>";
+                       echo "<div class='info-modal'>";
+                           echo "<img class='icon-persons' src='./imgs/familiar.png' alt='modalCart'>";
+                            echo "<h3>Salad with apple, papaya and watermelon</h3>";
+                        echo "</div>";
+                    echo "</div>";
+                    echo "<img class='recipe-image' src='./imgs/menu/appetizerTwo.png' alt=''>";
+                    echo "<div class='cta-price-orderNow '>";
+                       echo "<a class='btn-price-modal' href=''>$12</a>";
+                       echo  "<a class='btn-order-modal' href='./dishInfo.html'>Order Now!</a>";
+                    echo "</div>";
+                    echo "<div class='btn-close'>";
+                       echo "<label for='btn-modal-uno'>Close</label>";
+                    echo "</div>";
+                echo "</div>";
+               echo "<label for='btn-modal-uno' class='close-modal'></label>";
+            echo "</div>";
+        echo "</div>";
+        echo "<div class='recipe-thumb'>";
+            echo "<img class='recipe-image' src='./imgs/imgs2/" . $dish["dish_image"] . "' alt='RecipeOne'>";
+          echo "<a class='btn recipe-name' href='dishInfo.php?id=".$dish["id_dish"]."'>" . $dish["dish_name"] . "</a>";
         echo "</div>";
 
 
@@ -274,7 +274,7 @@ for ($i = 0; $i < $numberContainers; $i++) {
 
             for ($i = 0; $i < $numberContainers; $i++) {
 
-                if ($i < $dishesCount) {
+                if ($i < $dishesCount ) {
 
                     $dish = $dishes[$i];
 
@@ -310,7 +310,7 @@ for ($i = 0; $i < $numberContainers; $i++) {
                     echo "</div>";
                     echo "<div class='recipe-thumb'>";
                         echo "<img class='recipe-image' src='./imgs/imgs2/" . $dish["dish_image"] . "' alt='RecipeOne'>";
-                      echo "<a class='btn recipe-name' href='#'>" . $dish["dish_name"] . "</a>";
+                      echo "<a class='btn recipe-name' href='dishInfo.php?id=".$dish["id_dish"]."'>" . $dish["dish_name"] . "</a>";
                     echo "</div>";
 
 

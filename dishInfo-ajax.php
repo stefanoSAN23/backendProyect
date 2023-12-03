@@ -1,42 +1,9 @@
 <?php 
     require_once './database.php';
-    // Reference: https://medoo.in/api/select
-    // tb_dishes and tb_categories JOIN
-    $lang = "CH";
-    $url_params = "";
 
     if($_GET){
-        // Reference: https://medoo.in/api/where
-        /*$item = $database->select("tb_destinations","*",[
-            "id_destination"=>$_GET["id"]
-        ]);*/
-
-        // Reference: https://medoo.in/api/select
-        // Note: don't delete the [>] 
-        if(isset($_GET["lang"]) && $_GET["lang"] == "ch"){
-            $dishes = $database->select("tb_for_dishes",[
-                "[>]tb_for_categories"=>["id_category" => "id_category"]
-            ],[
-                "tb_for_dishes.id_dish",
-                "tb_for_dishes.dish_name_chinese",
-                "tb_for_dishes.dish_description_chinese",
-                "tb_for_dishes.dish_image",
-                "tb_for_dishes.dish_price",
-                "tb_for_categories.name_category",
-                "tb_for_categories.description_category",
-            ],[
-                "id_dish"=>$_GET["id"]
-            ]); 
-
-            //references
-            $dishes [0]["dish_name"] = $dishes [0]["dish_name_chinese"] ;
-            $dishes [0]["dish_description"] = $dishes [0]["dish_description_chinese"];
-
-            $lang = "EN";
-            $url_params = "?id=".$dishes [0]["id_dish"];
-
-        }else{
-            $dishes  = $database->select("tb_for_dishes",[
+      
+        $dishes = $database->select("tb_for_dishes",[
                 "[>]tb_for_categories"=>["id_category" => "id_category"]
             ],[
                 "tb_for_dishes.id_dish",
@@ -51,13 +18,8 @@
             ],[
                 "id_dish"=>$_GET["id"]
             ]);
-           
-            $lang = "CH";
-            $url_params = "?id=".$dishes [0]["id_dish"]."&lang=ch";
+
         }
-        
-    }
-    
 
 ?>
 
@@ -108,15 +70,14 @@
 
 
        echo "<div class='dishInfo-container'>";
-            echo "<h2>" . $dishes[0]["dish_name"] . "</h2>";
+            echo "<h2><span id='dish-name'>". $dishes[0]["dish_name_chinese"] . "</span></h2>";
             
             echo "<!-- info and Image container -->";
            echo  "<div class='infoImageDish'>";
                echo "<img class='infoImage' src='./imgs/imgs2/" . $dishes[0]["dish_image"] . "' alt='dishImage'>";
-               echo "<a href='dishInfo.php".$url_params."'>".$lang."</a>";
                 echo "<!-- Image-->";
-               echo  "<p>" . $dishes[0]["dish_description"] . " </p>";
-               
+               echo  "<p id='dish-name'>". $dishes[0]["dish_description_chinese"] . " </p>";
+               echo "<span id='lang' class='lang-btn' onclick='getTranslation(".$dishes[0] ["id_dish"].")'>CH</span>";
                
            echo "</div>";
 
@@ -139,5 +100,45 @@
         
         ?>
     </main>
+    <script>
+
+let requestLang = "ch";
+
+function switchLang(){
+    if(requestLang == "en") requestLang = "ch";
+    else requestLang = "en";
+    document.getElementById("lang").innerText = requestLang;
+}
+
+function getTranslation(id){
+    console.log(id);
+
+    let info = {
+        id_dish: id,
+        language: requestLang 
+    };
+
+    //fetch
+    fetch("http://localhost/backendProyectoShipu/language.php", {
+        method: "POST",
+        mode: "same-origin",
+        credentials: "same-origin",
+        headers: {
+            'Accept': "application/json, text/plain, */*",
+            'Content-Type': "application/json"
+        },
+        body: JSON.stringify(info)
+    })
+    .then(response => response.json())
+    .then(data => {
+        //console.log(data);
+    switchLang();
+    document.getElementById("dish-name").innerHTML = data.name;
+    document.getElementById("dish-description").innerHTML = data.description;
+
+    })
+    .catch(err => console.log("error: " + err));
+}
+</script>
 </body>
 </html>
