@@ -83,46 +83,45 @@
 
             <h2 class="register-welcome">Welcome!</h2>
             
-            <form method="post" action="register.php" class="register-form">
-                
-            <div class='form-items'>
-                    <div>
-                        <label for="fullname" class="lb-register">FullName:</label>
-                    </div>
-                    <div>
-                        <input id="fullname" name="fullname" class="inpt-register" type="text" placeholder="">
-                    </div>
-            </div>
-            <div class='form-items'>
-                    <div>
-                        <label for="email" class="lb-register">Email:</label>
-                    </div>
-                    <div>
-                        <input id="email" name="email" class="inpt-register" type="text" placeholder="">
-                    </div>
-                    <div>
-            </div>
-            <div class='form-items'>
-                        <label for="username" class="lb-register">Username:</label>
-                    </div>
-                    <div>
-                        <input id="username" name="username" class="inpt-register" type="text" placeholder="">
-                    </div>
-            </div>
-            <div class='form-items'>
-                    <div>
-                        <label for="password" class="lb-register">Password:</label>
-                    </div>
-                    <div>
-                        <input id="password" name="password" class="inpt-register" type="password" placeholder="">
-                    </div>
-            </div>
-                    <div>
-                    <input class='btn-register btn' type='submit' value="REGISTER">
-                    </div>
-                <p><?php echo $message; ?></p>
-                        <input type="hidden" name="register" value="1">
-            </form>
+            <form method="post" action="register.php">
+    <div class='form-items'>
+        <div>
+            <label for="fullname" class="lb-register">FullName:</label>
+        </div>
+        <div>
+            <input id="fullname" name="fullname" class="inpt-register" type="text" placeholder="">
+        </div>
+    </div>
+    <div class='form-items'>
+        <div>
+            <label for="email" class="lb-register">Email:</label>
+        </div>
+        <div>
+            <input id="email" name="email" class="inpt-register" type="text" placeholder="">
+        </div>
+    </div>
+    <div class='form-items'>
+        <div>
+            <label for="username" class="lb-register">Username:</label>
+        </div>
+        <div>
+            <input id="username" name="username" class="inpt-register" type="text" placeholder="">
+        </div>
+    </div>
+    <div class='form-items'>
+        <div>
+            <label for="password" class="lb-register">Password:</label>
+        </div>
+        <div>
+            <input id="password" name="password" class="inpt-register" type="password" placeholder="">
+        </div>
+    </div>
+    <div>
+        <input class='btn-register btn' type='submit' value="REGISTER">
+    </div>
+    <p><?php echo $message; ?></p>
+    <input type="hidden" name="register" value="1">
+</form>
             
 
             <a class="link-login" href="./login.php">Already have an account?</a>

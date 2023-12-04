@@ -151,7 +151,8 @@
     background: hsla(0, 0%, 18%, 90%); 
     overflow: auto; 
     gap: 4rem;
-    justify-content: center; 
+    justify-content: center;
+     
 }
 
 /* Styles for the information modal container */

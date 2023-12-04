@@ -82,19 +82,23 @@
         <div class="register-container">
             <h2 class="register-welcome">Welcome!</h2>
 
-            <form method="post" action="login.php" class="register-form">
+            <form method="post" action="login.php">
+            <div class='form-items'>
                 <div>
                 <label for="username" class="lb-register">Username:</label>
                 </div>
-                <div>
+                <div>       
                 <input id="username" name="username" class="inpt-register" type="text" placeholder="">
                 </div>
+          </div>
+          <div class='form-items'>
                 <div>
                 <label for="password" class="lb-register">Password:</label>
                 </div>
                 <div>
                 <input id="password" name="password" class="inpt-register" type="password" placeholder="">
                 </div>
+        </div>
                 <div>
                 <input class='btn-login btn' type='submit' value="LOGIN">
                 </div>
