@@ -1,3 +1,32 @@
+<?php
+    require_once './database.php';
+    $message = "";
+    $messageLogin = "";
+
+    if($_POST){
+
+        if(isset($_POST["login"])){
+            $user = $database->select("tb_for_clients", "*",[
+                "username" =>$_POST["username"]
+            ]);
+
+            if (count($user) > 0){
+                if (password_verify($_POST["password"], $user[0]["password"])){
+                    session_start();
+                    $_SESSION["isLoggedIn"] = true;
+                    $_SESSION["fullname"] = $user[0]["fullname"];
+                    header("location: index.php");
+                } else{
+                    $messageLogin = "wrong username or password";
+                }
+            } else{
+                $messageLogin = "wrong username or password";
+            }
+           
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,7 +62,15 @@
                 <li><a class="nav-list-link" href="./menu.php">MENU</a></li>
                 <li><a class="nav-list-link" href="./cart.php">CART</a></li>
                 <li><a class="nav-list-link" href="./register.php">SIGN UP</a></li>
-                <li><a class="nav-list-link" href="./login.php">LOGIN</a></li>
+                <?php 
+                session_start();
+                if (isset($_SESSION["isLoggedIn"])){
+                    echo "<li><a class='nav-list-link' href='profile.php'>".$_SESSION["fullname"]."</a></li>";
+                    echo "<li><a class='nav-list-link' href='logout.php'>Logout</a></li>";
+                }else {
+                    echo " <li><a class='nav-list-link' href='./login.php'>Login</a></li>";
+                }
+                ?>
             </ul>
 
 
@@ -45,17 +82,27 @@
         <div class="register-container">
             <h2 class="register-welcome">Welcome!</h2>
 
-            <form class="register-form">
-                <label class="lb-register">FullName:</label>
-                <input class="inpt-register" type="text" placeholder="">
+            <form method="post" action="login.php" class="register-form">
+                <div>
+                <label for="username" class="lb-register">Username:</label>
+                </div>
+                <div>
+                <input id="username" name="username" class="inpt-register" type="text" placeholder="">
+                </div>
+                <div>
+                <label for="password" class="lb-register">Password:</label>
+                </div>
+                <div>
+                <input id="password" name="password" class="inpt-register" type="password" placeholder="">
+                </div>
+                <div>
+                <input class='btn-login btn' type='submit' value="LOGIN">
+                </div>
+                        <p><?php echo $messageLogin; ?></p>
+                        <input type="hidden" name="login" value="1">
+                
             </form>
-            <form class="register-form">
-                <label class="lb-register">Email:</label>
-                <input class="inpt-register" type="text" placeholder="">
-            </form>
-
-            <a href="#" class="btn-login btn">Log In</a>
-
+            
             <a class="link-register" href="./register.php">Don't have any account?</a>
 
         </div>

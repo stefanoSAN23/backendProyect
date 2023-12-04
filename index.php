@@ -56,7 +56,16 @@
                 <li><a class="nav-list-link" href="./menu.php">MENU</a></li>
                 <li><a class="nav-list-link" href="./cart.php">CART</a></li>
                 <li><a class="nav-list-link" href="./register.php">SIGN UP</a></li>
-                <li><a class="nav-list-link" href="./login.php">LOGIN</a></li>
+                
+                <?php 
+                session_start();
+                if (isset($_SESSION["isLoggedIn"])){
+                    echo "<li><a class='nav-list-link' href='profile.php'>".$_SESSION["fullname"]."</a></li>";
+                    echo "<li><a class='nav-list-link' href='logout.php'>Logout</a></li>";
+                }else {
+                    echo " <li><a class='nav-list-link' href='./login.php'>Login</a></li>";
+                }
+                ?>
             </ul>
 
 

@@ -29,3 +29,9 @@
 .inpt-register:focus {
     outline: none; 
 }
+
+.form-items{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
