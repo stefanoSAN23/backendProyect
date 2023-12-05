@@ -23,10 +23,11 @@
 .lang-btn {
     cursor: pointer;
     padding: 5px 10px;
-    border: 1px solid #ccc;
-    background-color: #ffffff; /* Cambia este color según tu preferencia */
-    color: #000000; /* Cambia este color según tu preferencia */
+    
+    background-color: var(--clr-main); /* Cambia este color según tu preferencia */
+    color: white; /* Cambia este color según tu preferencia */
     border-radius: 5px;
+    text-decoration: none;
 }
 
 /* Cambia el color cuando se pasa el mouse por encima */

@@ -112,7 +112,7 @@
 
 
         <div class="cta-container">
-            <a href="./menu.php" class="btn go-to-menu-btn">Go to Menu</a>
+            <a href="menu.php" class="btn go-to-menu-btn">Go to Menu</a>
         </div>
 
 
@@ -128,7 +128,7 @@
 
             <div class="rice-container">
                 <img class="rice-image" src="./imgs/riceAnimate.png" alt="Explore Destinations & Activities">
-                <h2 class="recipes-title">Customer Favorites!</h2>
+                <h2 class="recipes-title"> Our Featured Dishes!</h2>
             </div>
 
 

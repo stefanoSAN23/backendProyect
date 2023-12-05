@@ -160,9 +160,11 @@
             echo "<!-- info and Image container -->";
            echo  "<div class='infoImageDish'>";
                echo "<img class='infoImage' src='./imgs/imgs2/" . $dishes[0]["dish_image"] . "' alt='dishImage'>";
-               echo "<a class='lang-btn'  href='dishInfo.php".$url_params."'>".$lang."</a>";
+               
                 echo "<!-- Image-->";
+                
                echo  "<p>" . $dishes[0]["dish_description"] . " </p>";
+               echo "<a class='lang-btn'  href='dishInfo.php".$url_params."'>".$lang."</a>";
                
                
            echo "</div>";

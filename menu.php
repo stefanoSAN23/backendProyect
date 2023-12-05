@@ -3,11 +3,6 @@
     require_once './database.php';
     // Reference: https://medoo.in/api/select
     $items = $database->select("tb_for_dishes","*");
-    if (!isset($_SESSION["isLoggedIn"])) {
-        // Redirige al usuario al inicio de sesión si no ha iniciado sesión
-        header("location: login.php");
-        exit(); // Asegura que el script no continúe ejecutándose después de la redirección
-    }
     
     // ... Resto de tu código para mostrar el menú ...
     

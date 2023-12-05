@@ -15,7 +15,12 @@
                     session_start();
                     $_SESSION["isLoggedIn"] = true;
                     $_SESSION["fullname"] = $user[0]["fullname"];
-                    header("location: index.php");
+                    if($user[0]["user_type"]==0){
+                        header("location: index.php");
+                    }else{
+                        header("location: ./admin/list-dish.php");
+                    }
+                    
                 } else{
                     $messageLogin = "wrong username or password";
                 }
