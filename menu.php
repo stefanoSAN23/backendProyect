@@ -1,7 +1,38 @@
 <?php
+    session_start();
     require_once './database.php';
     // Reference: https://medoo.in/api/select
     $items = $database->select("tb_for_dishes","*");
+    if (!isset($_SESSION["isLoggedIn"])) {
+        // Redirige al usuario al inicio de sesión si no ha iniciado sesión
+        header("location: login.php");
+        exit(); // Asegura que el script no continúe ejecutándose después de la redirección
+    }
+    
+    // ... Resto de tu código para mostrar el menú ...
+    
+    // Verifica si se ha enviado un ID de platillo a través de GET
+    if (isset($_GET['id'])) {
+        $dishId = $_GET['id'];
+    
+        // Obtén la información del platillo desde la base de datos
+        $dish = $database->select("tb_for_dishes", [
+            "[>]tb_for_categories" => ["id_category" => "id_category"]
+        ], [
+            "tb_for_dishes.id_dish",
+            "tb_for_dishes.dish_name",
+            "tb_for_dishes.dish_price",
+        ], [
+            "id_dish" => $dishId
+        ]);
+    
+        // Verifica si el platillo existe
+        if (!empty($dish)) {
+            // Puedes mostrar información adicional del platillo aquí
+            echo "<p>Selected Dish: " . $dish[0]["dish_name"] . "</p>";
+        }
+    }
+     
     
 ?>
   
@@ -40,7 +71,6 @@
                 <li><a class="nav-list-link" href="./cart.php">CART</a></li>
                 <li><a class="nav-list-link" href="./register.php">SIGN UP</a></li>
                 <?php 
-                session_start();
                 if (isset($_SESSION["isLoggedIn"])){
                     echo "<li><a class='nav-list-link' href='profile.php'>".$_SESSION["fullname"]."</a></li>";
                     echo "<li><a class='nav-list-link' href='logout.php'>Logout</a></li>";

@@ -35,3 +35,32 @@
     flex-direction: column;
     margin: 1rem;
 }
+.orderBtns-container {
+    display: grid;
+    
+    width: 100%;
+    padding: 10px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.orderBtns-container a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .orderBtns-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .orderBtns-container a {
+        margin-top: 10px; /* Ajusta el espacio entre los botones en dispositivos móviles */
+    }
+}

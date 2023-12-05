@@ -171,7 +171,7 @@
 
 /* Styles for the order container */
 .order-container {
-    margin: 8rem auto;
+    margin: 4rem auto;
     color: var(--clr-white);
     font-size: var(--fs-md); 
     display: grid; 

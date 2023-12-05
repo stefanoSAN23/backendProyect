@@ -1,5 +1,44 @@
 <?php 
+    session_start();
     require_once './database.php';
+
+    if (!isset($_SESSION["isLoggedIn"])) {
+        // Redirige al usuario al inicio de sesión si no ha iniciado sesión
+        header("location: login.php");
+        exit(); // Asegura que el script no continúe ejecutándose después de la redirección
+    }
+    if (isset($_GET['id'])) {
+        $dishId = $_GET['id'];
+    
+        // Obtén la información del platillo desde la base de datos
+        $dish = $database->select("tb_for_dishes", [
+            "[>]tb_for_categories" => ["id_category" => "id_category"]
+        ], [
+            "tb_for_dishes.id_dish",
+            "tb_for_dishes.dish_name",
+            "tb_for_dishes.dish_price",
+        ], [
+            "id_dish" => $dishId
+        ]);
+    
+        // Verifica si el platillo existe
+        if (!empty($dish)) {
+            // Agrega el platillo al carrito (almacenado en la sesión)
+    
+            // Si el platillo ya está en el carrito, incrementa la cantidad
+            if (isset($_SESSION['cart'][$dish[0]["id_dish"]])) {
+                $_SESSION['cart'][$dish[0]["id_dish"]]['quantity'] += 1;
+            } else {
+                // Si el platillo no está en el carrito, agrégalo
+                $_SESSION['cart'][$dish[0]["id_dish"]] = [
+                    'id' => $dish[0]["id_dish"],
+                    'name' => $dish[0]["dish_name"],
+                    'price' => $dish[0]["dish_price"],
+                    'quantity' => 1,
+                ];
+            }
+        }
+    }
     // Reference: https://medoo.in/api/select
     // tb_dishes and tb_categories JOIN
     $lang = "CH";
@@ -98,7 +137,7 @@
                 <li><a class="nav-list-link" href="./cart.php">CART</a></li>
                 <li><a class="nav-list-link" href="./register.php">SIGN UP</a></li>
                 <?php 
-                session_start();
+            
                 if (isset($_SESSION["isLoggedIn"])){
                     echo "<li><a class='nav-list-link' href='profile.php'>".$_SESSION["fullname"]."</a></li>";
                     echo "<li><a class='nav-list-link' href='logout.php'>Logout</a></li>";
@@ -121,7 +160,7 @@
             echo "<!-- info and Image container -->";
            echo  "<div class='infoImageDish'>";
                echo "<img class='infoImage' src='./imgs/imgs2/" . $dishes[0]["dish_image"] . "' alt='dishImage'>";
-               echo "<a href='dishInfo.php".$url_params."'>".$lang."</a>";
+               echo "<a class='lang-btn'  href='dishInfo.php".$url_params."'>".$lang."</a>";
                 echo "<!-- Image-->";
                echo  "<p>" . $dishes[0]["dish_description"] . " </p>";
                
@@ -141,7 +180,13 @@
            echo "<div class='infoPrice'>";
                echo "<p>" .  $dishes[0]["dish_price"] . "</p>"; 
                echo "<a href='./menu.php' class='btn-order-dish btn'>Go To Menu</a>"; 
-               echo "<a href='#' class='btn-order-dish btn'>Add To Cart!</a>"; 
+               if (isset($_SESSION["isLoggedIn"])) {
+                // Si ha iniciado sesión, muestra el botón "Add To Cart"
+                echo "<a href='./cart.php?id=" . $dishes[0]["id_dish"] . "' class='btn-order-dish btn'>Add To Cart!</a>";
+            } else {
+                // Si no ha iniciado sesión, redirige al usuario a la página de registro
+                echo "<a href='./register.php' class='btn-order-dish btn'>Register to Add To Cart</a>";
+            }
            echo "</div>";
         echo "</div>";
         
